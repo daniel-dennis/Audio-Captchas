@@ -81,8 +81,8 @@ class ImageSequence(keras.utils.Sequence):
 
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--width', help='Width of captcha image', type=int)
-    parser.add_argument('--height', help='Height of captcha image', type=int)
+    parser.add_argument('--width', help='Width of captcha image', default=128, type=int)
+    parser.add_argument('--height', help='Height of captcha image', default=160, type=int)
     parser.add_argument('--length', help='Length of captchas in characters', type=int)
     parser.add_argument('--batch-size', help='How many images in training captcha batches', type=int)
     parser.add_argument('--train-dataset', help='Where to look for the training image dataset', type=str)
