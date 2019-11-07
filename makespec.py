@@ -13,7 +13,6 @@ def chunks(l, n):
         yield l
 
 def gen_spectograms(items, input_dir, output_dir):
-    print('proc')
     for filename in items:
         if filename.endswith('.mp3'):
             popenarg = 'sox %s -n spectrogram -r -x 128 -y 64 -o %s.jpg' % (os.path.join(input_dir, filename), (os.path.join(output_dir, filename[0:8])))
