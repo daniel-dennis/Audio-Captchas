@@ -50,7 +50,7 @@ def main():
     print('Generating captchas with symbol set {' + captcha_symbols + '}')
     start = time.time()
 
-    for i in range(args.length):
+    for i in range(args.count):
         captcha_text = '›'.join([random.choice(captcha_symbols) for j in range(args.length)])
 
         if random.randint(1, 5) == 1:
