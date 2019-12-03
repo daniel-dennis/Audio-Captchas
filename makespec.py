@@ -50,7 +50,7 @@ def main():
     binlen = len(dirlist) / mp.cpu_count()
 
     for segment in chunks(dirlist, int(binlen)):
-        p = mp.Process(target=gen_spectograms(segment, args.input_dir, args.output_dir,))
+        p = mp.Process(target=gen_spectograms, args=(segment, args.input_dir, args.output_dir,))
         p.start()
         procs.append(p)
 
